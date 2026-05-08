@@ -5,6 +5,16 @@
 
 <img width="879" height="360" alt="img" src="https://github.com/user-attachments/assets/f19367cb-3089-4440-be4a-06fcb3b25531" />
 
+```mermaid
+
+flowchart TD
+A([시작]) --> B{로그인?}
+B -- 예 --> C[대시보드]
+B -- 아니오 --> D[로그인 페이지]
+C --> E([종료])
+D --> E
+
+```
 
 markdown
 # Simple Calculator (Trendy Calculator)
@@ -16,8 +26,8 @@ markdown
 
 ## 📂 프로젝트 구조
 
-SimpleCalculator/
-├── SimpleCalculator.java     # 메인 소스 코드 (단일 파일 애플리케이션)
+test.SimpleCalculator/
+├── test.SimpleCalculator.java     # 메인 소스 코드 (단일 파일 애플리케이션)
 ├── README.md                 # 이 문서
 
 > **단일 파일 프로젝트**이기 때문에 별도의 패키지나 빌드 도구(Maven/Gradle)는 필요 없습니다.  
@@ -28,11 +38,11 @@ SimpleCalculator/
 ## 🚀 실행 방법
 
 1. **파일 저장**  
-   위 `SimpleCalculator.java` 코드를 그대로 복사해서 `SimpleCalculator.java` 파일로 저장합니다.
+   위 `test.SimpleCalculator.java` 코드를 그대로 복사해서 `test.SimpleCalculator.java` 파일로 저장합니다.
 
 2. **컴파일**
    ```bash
-   javac SimpleCalculator.java
+   javac test.SimpleCalculator.java
 
 전체 소스 코드java
 
@@ -41,7 +51,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class SimpleCalculator extends JFrame implements ActionListener {
+public class test.SimpleCalculator extends JFrame implements ActionListener {
 
     private JTextField num1Field;
     private JTextField num2Field;
@@ -59,7 +69,7 @@ public class SimpleCalculator extends JFrame implements ActionListener {
     private static final Font LABEL_FONT = new Font("Arial", Font.PLAIN, 14);
     // Define a common font for the result label
     private static final Font RESULT_FONT = new Font("Arial", Font.BOLD, 18);
-    public SimpleCalculator() {
+    public test.SimpleCalculator() {
         // Frame setup
         setTitle("Trendy Calculator");
         setSize(450, 250); // Slightly larger frame for better spacing
@@ -177,7 +187,7 @@ public class SimpleCalculator extends JFrame implements ActionListener {
     public static void main(String[] args) {
         // Run the GUI creation on the Event Dispatch Thread (EDT)
         SwingUtilities.invokeLater(() -> {
-            SimpleCalculator calculator = new SimpleCalculator();
+            test.SimpleCalculator calculator = new test.SimpleCalculator();
             calculator.setVisible(true);
         });
     }
