@@ -1,5 +1,6 @@
 package test;
 
+import javax.swing.*;
 import java.sql.Timestamp;
 
 public class DiaryEntry {
@@ -7,6 +8,7 @@ public class DiaryEntry {
     private String title;
     private String content;
     private Timestamp createdAt;
+    private JLabel2 name; //에러 있는 코드
 
     public DiaryEntry() {}
 
